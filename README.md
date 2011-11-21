@@ -10,9 +10,12 @@ Intentionally minimalist; it requires only the following basic Unix tools:
 - expr
 - fgrep
 - head
+- id
 - printf
 - screen
 - sh
+- sleep
+- su (for lowering privileges when run as root)
 - tail
 - wc
 
@@ -23,7 +26,8 @@ this you can use it as a drop-in init script for your server, or call it from
 a custom script of your own device.
 
 Some configuration is possible by changing the variables at the top of the
-script. You can also configure the tool by exporting these as environment
-variables before calling the mc-init.sh.
+script. If present, /etc/default/minecraft is used to fill these in. You can
+alternatively configure the tool by exporting as environment variables before
+invoking the script.
 
 Run the script without any arguments to see all supported commands.
